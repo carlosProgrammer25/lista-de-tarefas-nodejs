@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f6f8;
+}
+
+.container {
+  width: 400px;
+  margin: 60px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.titulo {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #373535;
+}
+
+
+.form-tarefa {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.form-tarefa input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-tarefa button {
+  padding: 8px 14px;
+  border: none;
+  background: #4CAF50;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-tarefa button:hover {
+  background: #43a047;
+}
+
+.lista .item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.lista .item:last-child {
+  border-bottom: none;
+}
+
+.delet {
+  color: #e53935;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.delet:hover {
+  color: #b71c1c;
+}

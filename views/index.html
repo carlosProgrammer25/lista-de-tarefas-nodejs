@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../public/style.css">
+</head>
+
+<body>
+    <!--
+    Os templates ficam na pasta views
+    Onde ficam os arquivos html que o servidor usa para gerar as páginas.
+    
+    Templates são HTML com lógica
+    Eles podem receber variáveis e mostrar conteúdo dinâmico html + js 
+    -->
+
+
+
+    <div class="container">
+        <h1 class="titulo">Lista de Tarefas</h1>
+
+
+        <form method="post" class="form-tarefa">
+            <input type="text" name="tarefa" >
+            <input type="submit" name="acao" value="Inserir">
+        </form>
+
+        <div class="lista">
+            <!--percorrendo array tarefasLista-->
+             <% for(let i=0; i < tarefasLista.length; i++ ){ %>
+
+            <p class="item">
+                <!--tarefasLista variavel onde sera renderizado os elementos-->
+                <!--tarefasLista[i]: a cada loop, renderiza o elemento correspondente ao índic-->
+                <span><%= tarefasLista[i] %></span>
+                <a href="/deletar/<%= i %>" class="delet">X</a>
+            </p>
+
+        <% } %>
+        </div>
+       
+
+    </div>
+</body>
+
+</html>
